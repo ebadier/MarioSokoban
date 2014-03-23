@@ -36,9 +36,15 @@ namespace sdl
 		typedef std::map< std::string, SurfaceID > StrToSurfaceIDMap;
 
 		/**
-		*	\brief return true if player win level.
+		*	\brief Routine to play current level.
+		*	\return true if player win level.
 		*/
-		bool Play();
+		bool PlayCurrentLevel();
+
+		/**
+		*	\brief Routine to progress in levels.
+		*/
+		void GameProgress();
 
 		/**
 		*	\brief Edit levels.

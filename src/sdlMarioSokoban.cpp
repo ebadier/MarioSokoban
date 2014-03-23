@@ -73,6 +73,16 @@ namespace sdl
 	}
 
 	//-------------------------------------------------------------------------------------------------------------------//
+	void MarioSokoban::GameProgress()
+	{
+		while(PlayCurrentLevel())
+		{
+			++mLastLevelSuccess;
+			if(! LoadLevel(mLastLevelSuccess)){break;}
+		}
+	}
+
+	//-------------------------------------------------------------------------------------------------------------------//
 	void MarioSokoban::Menu()
 	{
 		while (! mIsItTimeToClose)
@@ -96,11 +106,7 @@ namespace sdl
 				case SDLK_KP1:
 					if(LoadLevel(mLastLevelSuccess))
 					{
-						while(Play())
-						{
-							++mLastLevelSuccess;
-							if(! LoadLevel(mLastLevelSuccess)){break;}
-						}
+						GameProgress();
 					}
 					break;
 				//case SDLK_KP2:
@@ -141,19 +147,19 @@ namespace sdl
 				case SDLK_e: SDL_ShowCursor(SDL_ENABLE); break;
 				case SDLK_d: SDL_ShowCursor(SDL_DISABLE); break;
 				case SDLK_KP1:
-					if(LoadLevel(1)){Play();} break;
+					if(LoadLevel(1)){GameProgress();} break;
 				case SDLK_KP2:
-					if(LoadLevel(2)){Play();} break;
+					if(LoadLevel(2)){GameProgress();} break;
 				case SDLK_KP3:
-					if(LoadLevel(3)){Play();} break;
+					if(LoadLevel(3)){GameProgress();} break;
 				case SDLK_KP4:
-					if(LoadLevel(4)){Play();} break;
+					if(LoadLevel(4)){GameProgress();} break;
 				case SDLK_KP5:
-					if(LoadLevel(5)){Play();} break;
+					if(LoadLevel(5)){GameProgress();} break;
 				case SDLK_KP6:
-					if(LoadLevel(6)){Play();} break;
+					if(LoadLevel(6)){GameProgress();} break;
 				case SDLK_KP7:
-					if(LoadLevel(7)){Play();} break;
+					if(LoadLevel(7)){GameProgress();} break;
 				}
 				break;
 			}
@@ -167,7 +173,7 @@ namespace sdl
 	}
 
 	//-------------------------------------------------------------------------------------------------------------------//
-	bool MarioSokoban::Play()
+	bool MarioSokoban::PlayCurrentLevel()
 	{
 		bool levelSuccess = true;
 		while ((! mIsItTimeToClose) && mNbObjectifs)
@@ -184,6 +190,7 @@ namespace sdl
 				{
                 // Autres touches
 				case SDLK_ESCAPE: levelSuccess=false; mNbObjectifs=0; break;
+				case SDLK_r: LoadLevel(mLastLevelSuccess); break; // retry level.
 				case SDLK_e: SDL_ShowCursor(SDL_ENABLE); break;
 				case SDLK_d: SDL_ShowCursor(SDL_DISABLE); break;
                 // Si on appuie sur une touche directionnel.
