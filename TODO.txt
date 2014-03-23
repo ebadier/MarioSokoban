@@ -1,0 +1,5 @@
+_Timer to register player performance
+_Graphical Level Editor (currently Excel)
+_Sound
+_End screen with stats
+_More levels

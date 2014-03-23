@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<SDLApplication title="MarioSokoban" iconFile="../../data/mario.ico">
+		<KeyBoardSettings repeatDelay="200" repeatInterval="20"/> <!-- en ms -->
+		
+		<VideoSettings width="408" height="408" nbBitsPerPixel="32">
+			<Flags>
+				<!-- <Flag value="cpu"/> --> <!-- les données seront chargées dans la mémoire système -->
+				<Flag value="gpu"/>  	<!-- les données seront chargées dans la mémoire vidéo -->
+				<Flag value="doubleBuffer"/> 	<!-- mode double buffering -->
+				<!-- <Flag value="fullscreen"/> --> 	<!-- mode plein écran -->
+				<!-- <Flag value="resizable"/> --> 	<!-- la fenêtre sera redimensionnable. Par défaut elle ne l'est pas -->
+				<!-- <Flag value="sansBordures"/> --> <!-- la fenêtre n'aura pas de barre de titre ni de bordure -->
+				<!-- <Flag value="openGL"/> -->
+				<!-- <Flag value="openGLBlit"/> -->
+			</Flags>
+		</VideoSettings>
+		
+		<Images imagesDir="../../data/sprites/">
+			<BackGround filename="menu.bmp" positionX="0" positionY="0"/>
+			<Choix filename="choixNiveaux.bmp"/>
+			<Others>
+				<!-- Les quatres représentations de Mario -->
+				<Img filename="mario_haut.gif" id="haut"/>
+				<Img filename="mario_bas.gif" id="bas"/>
+				<Img filename="mario_gauche.gif" id="gauche"/>
+				<Img filename="mario_droite.gif" id="droite"/>
+				<!-- Les autres elements -->
+				<Img filename="mur.jpg" id="mur"/>
+				<Img filename="objectif.png" id="objectif"/>
+				<Img filename="caisse.jpg" id="caisse"/>
+				<Img filename="caisse_ok.jpg" id="caisse_ok"/>
+			</Others>
+		</Images>
+		
+		<Levels levelsDir="../../data/levels/">
+			<Level filename="level1.csv"/>
+			<Level filename="level2.csv"/>
+			<Level filename="level3.csv"/>
+			<Level filename="level4.csv"/>
+			<Level filename="level5.csv"/>
+			<Level filename="level6.csv"/>
+			<Level filename="level7.csv"/>
+		</Levels>
+</SDLApplication>

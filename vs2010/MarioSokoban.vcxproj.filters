@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ApplicationSDL">
+      <UniqueIdentifier>{ba5c7471-a867-487f-bf45-aa1206ab3c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="csv">
+      <UniqueIdentifier>{efd75d2e-6a43-4d31-8d5a-a63ff54dad2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{9e2f2bf0-0ad1-406f-b10d-5b89695639f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\sdlApplication.cpp">
+      <Filter>ApplicationSDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\sdlElements.cpp">
+      <Filter>ApplicationSDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdlMarioSokoban.cpp">
+      <Filter>ApplicationSDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxml\tinystr.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxml\tinyxml.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxml\tinyxmlerror.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxml\tinyxmlparser.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\csv\csv_parser.cpp">
+      <Filter>csv</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\sdlApplication.h">
+      <Filter>ApplicationSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdlElements.h">
+      <Filter>ApplicationSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdlMarioSokoban.h">
+      <Filter>ApplicationSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinyxml\tinyxmlHlp.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macros.h" />
+    <ClInclude Include="..\src\timer.h" />
+    <ClInclude Include="..\src\csv\csv_parser.h">
+      <Filter>csv</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
