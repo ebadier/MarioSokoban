@@ -1,8 +1,7 @@
 MarioSokoban
 ============
 
-My C++ version of Mario Sokoban
-Thanks to the original [C tutorial](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/18709-tp-mario-sokoban)
+My C++ version of Mario Sokoban thanks to the original [C tutorial](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/18709-tp-mario-sokoban)
 
 I added the possibility to create levels using Excel (in csv format).
 
